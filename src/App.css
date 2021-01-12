@@ -2,17 +2,28 @@
   box-sizing: border-box;
 }
 
-.App {
-  text-align: center;
-}
-
 .App-header {
   position: absolute;
   background-color: #282c34;
   height: 90px;
   width: 100%;
   padding: 25px;
+  text-align: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  z-index: 4;
+}
+
+@keyframes sharpen {
+  0% {
+    filter: blur(8px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+.fullImage {
+  width: 100%;
+  margin-top: 90px;
+  animation: sharpen 1s ease-in-out;
 }
